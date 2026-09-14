@@ -27,4 +27,4 @@ Decide what a screen or flow is before anyone builds it. Output is a **design br
 **Open for prototype**: the one or two questions only a `/prototype` can settle, each with the axis to diverge on.
 ```
 
-5. Append every settled rule as one dated line in `DESIGN.md`'s Decisions log. The brief is disposable; `DESIGN.md` is not.
+5. Append every settled rule as one dated line in `DESIGN.md`'s Decisions log, then call the Skill tool with "sync-docs" for the event "brief written". The brief is disposable; `DESIGN.md` and `docs/design/screens.md` are not.

@@ -13,4 +13,4 @@ The bridge from "it works" or "we picked this variant" to "this ships". Prototyp
 4. Run the passes in order, one Skill tool call each: "anti-slop" (bans, font, colour, structure), "mobile-first" (320px up), "better-ui" and "emil-design-eng" (polish and motion), "fix-copy" (every string).
 5. Clear the floor `DESIGN.md` names under Patterns, every item.
 6. Verify in a browser when available: each state, each breakpoint, keyboard-only pass, motion at 10% speed. Report what was verified and what was not.
-7. Log the decisions the finish settled in `DESIGN.md`. Hand back to the ticket: criteria ticked, ready for `/review-ui`.
+7. Log the decisions the finish settled in `DESIGN.md`, then call the Skill tool with "sync-docs" for the event "screen finished". Hand back to the ticket: criteria ticked, ready for `/review-ui`.

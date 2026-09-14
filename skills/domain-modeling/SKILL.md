@@ -18,3 +18,4 @@ Layout is described in `docs/agents/domain.md`. Create files lazily: `CONTEXT.md
 - **Update `CONTEXT.md` inline**, the moment a term resolves, using [CONTEXT-FORMAT.md](./CONTEXT-FORMAT.md). The glossary holds no implementation detail; it is a glossary and nothing else.
 - **Offer ADRs sparingly**, only when all three hold: hard to reverse, surprising without context, the result of a real trade-off. Format in [ADR-FORMAT.md](./ADR-FORMAT.md).
 - **Design decisions go to `DESIGN.md`**, not to an ADR: a settled visual or interaction rule is one line in its Decisions log.
+- **After an ADR lands**, call the Skill tool with "sync-docs" for the event "ADR written", so `docs/architecture/overview.md` carries the rule.

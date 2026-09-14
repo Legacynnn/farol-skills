@@ -5,7 +5,7 @@ Agent skills merged from four sources (Matt Pocock's engineering flow, Jakub Kre
 ## Layout
 
 - `skills/<name>/SKILL.md` is the skill; supporting `.md` files sit beside it; `agents/openai.yaml` carries Codex metadata.
-- `skills/setup-farol-skills/` holds the templates for the per-repo agent docs (`docs/agents/*.md`, `DESIGN.md`).
+- `skills/setup-farol-skills/` holds the templates for the per-repo docs: `docs/agents/*.md`, `DESIGN.md`, and the project docs layout under `docs/` (registry, product, design, architecture). Every project doc template carries frontmatter, fixed sections, **Update triggers** and **Sources**; `sync-docs` depends on that shape.
 - `skills/better-ui/`, `skills/emil-design-eng/`, `skills/tdd/`, `skills/code-review/` and `skills/anti-slop/reference/` are vendored from upstream (see `NOTICE.md`); `tdd` and `code-review` carry only the setup pointer and doc-path edits. Re-sync from upstream rather than editing here.
 - `.claude-plugin/plugin.json` lists every shipped skill; `.claude-plugin/marketplace.json` makes the repo its own marketplace. Bump `version` in `plugin.json` in the same commit as any change under `skills/`. Run `claude plugin validate . --strict` after touching either.
 - `scripts/link-skills.sh` symlinks every skill into `~/.claude/skills` and `~/.agents/skills` for local use.

@@ -44,6 +44,10 @@ Model-invoked references the skills above pull in. Reach for them directly when 
 - **`/better-ui`**: exact values for radii, shadows, icons, enter/exit, performance (Jakub Krehel).
 - **`/emil-design-eng`**: the animation decision framework, springs, gestures, review table (Emil Kowalski).
 
+## Docs
+
+The project docs under `docs/` (product vision, PRD, roadmap; brand, screens; architecture) each declare when they change. **`sync-docs`** is model-invoked and runs at the end of the flow steps above; call it after any decision. **`/add-doc`** adds a doc in the same shape and registers it.
+
 ## Precondition
 
-**`/setup-farol-skills`** once per repo: tracker (Linear, GitHub, or local `.scratch/`), `docs/agents/` navigation docs, `DESIGN.md`.
+**`/setup-farol-skills`** once per repo: tracker (Linear, GitHub, or local `.scratch/`), `docs/agents/` navigation docs, `DESIGN.md`, the `docs/` layout.

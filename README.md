@@ -25,7 +25,7 @@ Then, once per repo:
 /setup-farol-skills
 ```
 
-It configures the issue tracker (Linear, GitHub, or local `.scratch/`), writes the agent navigation docs under `docs/agents/`, and seeds `DESIGN.md`.
+It configures the issue tracker (Linear, GitHub, or local `.scratch/`), writes the agent navigation docs under `docs/agents/`, seeds `DESIGN.md`, and scaffolds the project docs layout below.
 
 ## The flow
 
@@ -45,7 +45,7 @@ It configures the issue tracker (Linear, GitHub, or local `.scratch/`), writes t
 
 `/ask-farol` is the router when you forget which one.
 
-## Agent docs a repo ends up with
+## Docs a repo ends up with
 
 | File | What it is for |
 | --- | --- |
@@ -58,6 +58,15 @@ It configures the issue tracker (Linear, GitHub, or local `.scratch/`), writes t
 | `.impeccable.md` | mirror of the Design Context so impeccable's own commands read the same truth |
 | `CONTEXT.md`, `docs/adr/` | glossary and decisions, created lazily by `domain-modeling` |
 | `.scratch/` | specs, tickets (local tracker), explorations, prototypes |
+| `docs/README.md` | the registry: every doc, its purpose, who writes it, when it changes. Add a row to add a doc |
+| `docs/product/vision.md` | one line, users, problems, principles, bets, not-this, measures |
+| `docs/product/prd.md` | capabilities per journey with status and spec pointer |
+| `docs/product/roadmap.md` | now / next / later / shipped / dropped |
+| `docs/design/brand.md` | name, story, voice, marks, imagery, feel |
+| `docs/design/screens.md` | every screen: route, purpose, primary action, states `L E R N`, status, spec |
+| `docs/architecture/overview.md` | context, contexts, containers, data, request paths, cross-cutting, boundaries, debt |
+
+Every doc carries frontmatter (`status`, `updated`, `owner`), fixed sections that stay even when empty, an **Update triggers** block, and **Sources**. `sync-docs` fires events (spec published, ticket done, screen finished, ADR written) against the triggers; `/add-doc` adds a doc in the same shape and registers it.
 
 ## Reference
 
@@ -73,6 +82,7 @@ It configures the issue tracker (Linear, GitHub, or local `.scratch/`), writes t
 - [shape-ui](./skills/shape-ui/SKILL.md): plan a screen before code; brief plus `DESIGN.md` updates.
 - [refine-ui](./skills/refine-ui/SKILL.md): polish pass against the craft catalogs.
 - [review-ui](./skills/review-ui/SKILL.md): change-scoped UI review with a Block/Approve verdict.
+- [add-doc](./skills/add-doc/SKILL.md): add a project doc in the standard shape and register it.
 
 **Model-invoked** (you or the agent)
 
@@ -86,6 +96,7 @@ It configures the issue tracker (Linear, GitHub, or local `.scratch/`), writes t
 - [fix-copy](./skills/fix-copy/SKILL.md): every string in the product voice.
 - [mobile-first](./skills/mobile-first/SKILL.md): rebuild a layout from 320px up.
 - [finish-screen](./skills/finish-screen/SKILL.md): prototype winner or rough screen to production standard; `implement` calls it on every screen.
+- [sync-docs](./skills/sync-docs/SKILL.md): walk every doc's update triggers for an event and edit only what they name.
 - [anti-slop](./skills/anti-slop/SKILL.md): the AI-slop bans and the font, colour, structure procedures that replace reflex defaults. Distilled from impeccable.style, references vendored.
 - [better-ui](./skills/better-ui/SKILL.md): exact values for radii, shadows, icons, enter/exit, performance. Vendored from Jakub Krehel.
 - [emil-design-eng](./skills/emil-design-eng/SKILL.md): animation decision framework, springs, gestures, review table. Vendored from Emil Kowalski.

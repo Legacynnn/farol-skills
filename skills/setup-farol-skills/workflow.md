@@ -18,6 +18,10 @@ The farol flow. Skills are steps; the docs in this folder are what every step re
 - `/refine-ui`, `fix-copy`, `mobile-first` are single-purpose passes over an existing screen.
 - `anti-slop`, `better-ui` and `emil-design-eng` are the catalogs every UI skill loads.
 
+## Docs stay true
+
+Every doc under `docs/` declares Update triggers. `sync-docs` runs at the end of `to-spec`, `to-tickets`, `implement`, `shape-ui` and `finish-screen`; call it yourself after any ADR or decision. `/add-doc` grows the layout.
+
 ## Context hygiene
 
 Keep steps 1 to 5 in one context window. `/implement` starts fresh per ticket. Compact at a phase boundary, never mid-phase.

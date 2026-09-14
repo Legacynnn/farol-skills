@@ -64,3 +64,5 @@ Per the tracker doc, in dependency order so blockers have identifiers first. Loc
 </ticket-template>
 
 No file paths or code in tickets except a prototype snippet that encodes a decision, trimmed and marked.
+
+Then call the Skill tool with "sync-docs" for the event "tickets published".
