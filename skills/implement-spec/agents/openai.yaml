@@ -1,0 +1,5 @@
+interface:
+  display_name: "Implement Spec (experimental)"
+  short_description: "Work a ticket graph with concurrent subagents"
+policy:
+  allow_implicit_invocation: false

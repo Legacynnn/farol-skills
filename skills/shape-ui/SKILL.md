@@ -10,7 +10,7 @@ Decide what a screen or flow is before anyone builds it. Output is a **design br
 
 1. Read `DESIGN.md`, `CONTEXT.md`, `docs/agents/navigation.md`. If `DESIGN.md` is missing, stop and tell the user to run `/setup-farol-skills`; shaping without it produces generic UI.
 2. Call the Skill tool with "grilling", scoped to the screen: who arrives here and from where, the one primary action, what they must see first, the states (loading, empty, error, narrow width), what is destructive and how it is confirmed, what the copy voice says here. `DESIGN.md` already answers most of it; only the open branches get asked.
-3. Call the Skill tool with "emil-design-eng" for the motion decisions the brief must fix: what animates, how often it is seen, what stays instant.
+3. Call the Skill tool with "anti-slop" and run its font, colour and structure procedures for anything `DESIGN.md` leaves undecided; then "emil-design-eng" for the motion decisions the brief must fix: what animates, how often it is seen, what stays instant.
 4. Write the brief to `.scratch/specs/<slug>/design-brief.md` (or the tracker issue when the spec already lives there):
 
 ```md

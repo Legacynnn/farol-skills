@@ -11,7 +11,7 @@ A change review, not a screen review: what did this diff make worse? Read-only.
 1. Resolve scope, first match wins: the target the user named (`pr 42`, a branch, a range), else commits ahead of the merge base plus uncommitted changes, else the dirty tree, else stop and ask; never fall back to `HEAD~1` alone. Exclude lockfiles, snapshots, generated output; say what was excluded.
 2. Expand changed files one hop to the surfaces they render in; two hops for tokens and shared primitives. Review at most five consumers and say how many were not expanded.
 3. Read `DESIGN.md`. A documented convention decides where a finding is reported, never whether it is one.
-4. Call the Skill tool twice, for "better-ui" and "emil-design-eng", and apply both catalogs to the changed surfaces. Add the floor checks: accessible names, keyboard reach, visible focus, 320px, contrast, colour-only meaning, reduced motion, destructive confirmation, copy in the `DESIGN.md` voice.
+4. Call the Skill tool three times, for "anti-slop", "better-ui" and "emil-design-eng", and apply all three catalogs to the changed surfaces. Check the floor `DESIGN.md` names under Patterns, and the copy against its voice.
 5. Classify each finding `Introduced`, `Regression`, or `Pre-existing`. Only the first two count toward the verdict; list at most three pre-existing ones in their own section.
 6. Report:
 

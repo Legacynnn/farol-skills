@@ -1,7 +1,6 @@
 ---
 name: mobile-first
-description: Refactor a screen to a mobile-first layout that grows through the DESIGN.md breakpoints, with touch targets, safe areas and no horizontal scroll at 320px.
-disable-model-invocation: true
+description: Mobile-first refactor of a screen through the DESIGN.md breakpoints. Use when the user mentions responsive, mobile, breakpoints, touch targets, or a layout breaking at narrow widths, or when finish-screen or implement produce a screen.
 ---
 
 # Mobile first

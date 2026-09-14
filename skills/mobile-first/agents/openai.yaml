@@ -1,5 +1,3 @@
 interface:
   display_name: "Mobile First"
   short_description: "Refactor a screen mobile-first"
-policy:
-  allow_implicit_invocation: false

@@ -9,14 +9,14 @@ The farol flow. Skills are steps; the docs in this folder are what every step re
 3. **Prototype when talk is not enough**: `/prototype`. Logic question: one HTML file. UI question: variants behind a picker, styled from `DESIGN.md`. Verdict flows back into the spec.
 4. **Spec**: `/to-spec`. Problem, journeys, requirements, decisions. Published to the tracker.
 5. **Tickets**: `/to-tickets`. Small vertical slices, one session each, blocking edges declared.
-6. **Build**: `/implement <ticket>` per ticket, fresh context per ticket.
-7. **Finish UI**: `/finish-screen` on any screen a ticket produced; `/review-ui` before merge.
+6. **Build**: `/implement <ticket>` per ticket, fresh context per ticket. Or `/implement-spec` (experimental) to work the whole ticket graph with concurrent subagents.
+7. **Review**: `code-review` and `finish-screen` run inside implement; `/review-ui` before merge.
 
 ## UI side-flow
 
 - `/shape-ui` before code, when the UX itself is undecided. Updates `DESIGN.md`.
-- `/refine-ui`, `/fix-copy`, `/mobile-first` are single-purpose passes over an existing screen.
-- `better-ui` and `emil-design-eng` are the rule catalogs every UI skill loads.
+- `/refine-ui`, `fix-copy`, `mobile-first` are single-purpose passes over an existing screen.
+- `anti-slop`, `better-ui` and `emil-design-eng` are the catalogs every UI skill loads.
 
 ## Context hygiene
 

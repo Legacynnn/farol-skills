@@ -47,7 +47,9 @@ Summarise findings. Then take sections in order, one answer each, leading with t
 
 Ask which team / project key when Linear. Record in `docs/agents/issue-tracker.md` from the matching template in this folder.
 
-**Section B: DESIGN.md.** If `DESIGN.md` exists, keep it and skip. If `.impeccable.md` exists, offer to promote its content into `DESIGN.md` and leave `.impeccable.md` as a one-line pointer. Otherwise seed `DESIGN.md` from [design.md](./design.md), pre-filling every field exploration can answer (tokens, stack, component library, motion library, fonts) and asking only the fields code cannot answer: audience, jobs to be done, tone, references. Three questions, not twenty.
+**Section B: DESIGN.md.** If `DESIGN.md` exists, keep it and skip. If `.impeccable.md` exists, promote its Design Context into `DESIGN.md` Product. Otherwise seed `DESIGN.md` from [design.md](./design.md), pre-filling every field exploration can answer (tokens, stack, component library, motion library, fonts) and asking only the fields code cannot answer: audience, jobs to be done, tone in three concrete words, references and anti-references, theme context (when, where, by whom). Five questions, not twenty. Fonts and palette that are still reflex defaults get flagged as `<decide via anti-slop>` rather than copied in.
+
+Always write `.impeccable.md` as a mirror so impeccable's own commands read the same context: a `## Design Context` section with Users, Brand Personality, Aesthetic Direction, Design Principles, copied from `DESIGN.md` Product, plus the line `Source of truth: DESIGN.md`.
 
 **Section C: Navigation.** Draft `docs/agents/navigation.md` from [navigation.md](./navigation.md) with what exploration found. Show it; the user corrects, not authors.
 

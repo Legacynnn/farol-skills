@@ -2,7 +2,7 @@
 
 Several **structurally different** variants of one piece of UI, on one route, behind a fixed picker. The user flips, picks, steals bits from each, and the rest goes to the prototype branch.
 
-Before building, call the Skill tool twice, for "better-ui" and "emil-design-eng". Every variant clears their bar individually: right easing, sub-300ms motion, transform/opacity only, concentric radii, shadows for depth, reduced motion honoured. Divergence is never an excuse to drop craft.
+Before building, call the Skill tool three times, for "anti-slop", "better-ui" and "emil-design-eng". Every variant clears their bar individually: none of the slop bans, right easing, sub-300ms motion, transform/opacity only, concentric radii, shadows for depth, reduced motion honoured. Divergence is never an excuse to drop craft.
 
 ## Where it renders
 

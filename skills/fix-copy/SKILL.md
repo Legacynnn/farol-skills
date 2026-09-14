@@ -1,7 +1,6 @@
 ---
 name: fix-copy
-description: Rewrite the UI copy of a screen (labels, buttons, errors, empty states, helper text) in the DESIGN.md voice and CONTEXT.md vocabulary.
-disable-model-invocation: true
+description: Rewrite UI copy (labels, buttons, errors, empty states, helper text) in the DESIGN.md voice and CONTEXT.md vocabulary. Use when the user mentions copy, microcopy, wording, labels, error messages, or when finish-screen or implement produce a screen.
 ---
 
 # Fix copy

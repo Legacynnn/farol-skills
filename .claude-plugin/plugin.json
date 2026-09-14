@@ -1,6 +1,6 @@
 {
   "name": "farol-skills",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Farol's development skills: doc-aware grilling, codebase and GitHub exploration, prototypes, specs to session-sized tickets, and DESIGN.md-driven UI shaping, refining and finishing.",
   "author": {
     "name": "Dan Melo"
@@ -29,12 +29,16 @@
     "./skills/to-spec",
     "./skills/to-tickets",
     "./skills/implement",
+    "./skills/implement-spec",
+    "./skills/tdd",
+    "./skills/code-review",
     "./skills/shape-ui",
     "./skills/refine-ui",
     "./skills/fix-copy",
     "./skills/mobile-first",
     "./skills/finish-screen",
     "./skills/review-ui",
+    "./skills/anti-slop",
     "./skills/better-ui",
     "./skills/emil-design-eng"
   ]

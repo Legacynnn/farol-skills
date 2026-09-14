@@ -1,5 +1,3 @@
 interface:
   display_name: "Fix Copy"
   short_description: "Rewrite UI strings in the product voice"
-policy:
-  allow_implicit_invocation: false

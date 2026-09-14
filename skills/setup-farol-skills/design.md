@@ -6,13 +6,15 @@ The design system as an agent reads it. Every UI skill loads this before touchin
 
 - **Audience**: `<who, in what context, on what device most of the time>`
 - **Jobs**: `<the two or three things users come here to do>`
-- **Tone**: `<three adjectives, e.g. calm, precise, warm>`; never `<what it must not feel like>`
+- **Tone**: `<three concrete words, e.g. warm, mechanical, opinionated>`; anti-references: `<what it must not look like>`
+- **Direction**: `<one aesthetic phrase, e.g. editorial and dense>`; theme `<light | dark>` because `<when, where, by whom it is used>`
 - **References**: `<products or sites whose feel we want, with the one thing to take from each>`
+- **Principles**: `<three to five sentences every design decision traces to>`
 
 ## Foundations
 
-- **Type**: `<font family>` for UI, `<font family>` for display; scale `<steps>`; body `<size>/<line-height>`; tabular numbers on data
-- **Color**: tokens at `<path>`; semantic roles: `bg`, `surface`, `border`, `fg`, `muted`, `accent`, `danger`, `success`; dark mode via `<class | media>`
+- **Type**: `<display face>` + `<body face>`, chosen by the anti-slop font procedure because `<reason>`; scale `<five steps, ratio ≥ 1.25>`; body `<size>/<line-height>`, measure 65-75ch; tabular numbers on data
+- **Color**: brand hue `<oklch>`; neutrals tinted toward it; tokens at `<path>`; semantic roles: `bg`, `surface`, `border`, `fg`, `muted`, `accent`, `danger`, `success`; weight 60/30/10; dark mode via `<class | media>`
 - **Spacing**: `<4px grid | 8px grid>`; section gap `<value>`; card padding `<value>`
 - **Radius**: `<sm/md/lg values>`; nested surfaces follow concentric radius (outer = inner + padding)
 - **Elevation**: shadows for depth, borders for structure; shadow tokens `<names>`
@@ -42,6 +44,13 @@ The design system as an agent reads it. Every UI skill loads this before touchin
 - **Layout shells**: `<app shell, marketing shell, auth shell>` at `<paths>`
 - **Data density**: `<dense tables | airy cards>` by surface
 - **States every screen ships with**: loading, empty, error, narrow width
+- **Floor every screen clears**: every control has an accessible name; keyboard reaches everything a pointer does; focus is visible; contrast passes; nothing rides on colour alone; `prefers-reduced-motion` honoured; destructive actions confirmed; nothing clipped at 320px
+
+## Never here
+
+The slop bans from `anti-slop` apply everywhere: no side-stripe borders, no gradient text, no cyan-on-dark, no pure black or white, no cards in cards, no decorative glass. Add product-specific bans below.
+
+- `<...>`
 
 ## Decisions log
 

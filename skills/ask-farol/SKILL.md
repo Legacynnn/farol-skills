@@ -18,7 +18,7 @@ You don't remember every skill, so ask. A **flow** is a path through the skills.
 4. **Branch: is the UX itself undecided?** → **`/shape-ui`** first, a brief per screen, before prototyping.
 5. **`/to-spec`** turns the thread into a spec: problem, journeys, requirements, decisions. Published to the tracker.
 6. **`/to-tickets`** splits it into session-sized vertical slices with blocking edges.
-7. **`/implement <ticket>`** per ticket, fresh context each. It builds test-first, runs `/finish-screen` on any screen, reviews, commits.
+7. **`/implement <ticket>`** per ticket, fresh context each. It drives `tdd` at the agreed seams, loads the UI catalogs for any screen, closes with `code-review`, commits. **`/implement-spec`** (experimental) works the whole ticket graph instead: concurrent implementer subagents in worktrees, merged as the frontier moves, one PR.
 8. **`/review-ui`** on the branch or PR before merge.
 
 Keep steps 1 to 6 in one context window. Compact at a phase boundary, never mid-phase.
@@ -28,9 +28,9 @@ Keep steps 1 to 6 in one context window. Compact at a phase boundary, never mid-
 Single-purpose passes over an existing screen. Each reads `DESIGN.md` and loads the catalogs.
 
 - **`/refine-ui`**: polish (spacing, radii, elevation, icons, motion, states).
-- **`/fix-copy`**: every string in the product voice.
-- **`/mobile-first`**: rebuild the layout from 320px up.
-- **`/finish-screen`**: all of the above plus every state and the accessibility floor, for a prototype winner or a rough screen.
+- **`fix-copy`**: every string in the product voice. Model-invoked, so "fix the wording" reaches it.
+- **`mobile-first`**: rebuild the layout from 320px up. Model-invoked, so "make it responsive" reaches it.
+- **`finish-screen`**: all of the above plus every state and the floor. Model-invoked: `implement` calls it on any screen a ticket produces; you call it on a prototype winner.
 
 ## Vocabulary underneath
 
@@ -38,6 +38,9 @@ Model-invoked references the skills above pull in. Reach for them directly when 
 
 - **`/grilling`**: the interview primitive.
 - **`/domain-modeling`**: glossary and ADR discipline.
+- **`/tdd`**: red-green at pre-agreed seams.
+- **`/code-review`**: two-axis diff review, Standards and Spec, in parallel sub-agents.
+- **`/anti-slop`**: the AI-slop bans and the font, colour, structure procedures that replace reflex choices (impeccable.style).
 - **`/better-ui`**: exact values for radii, shadows, icons, enter/exit, performance (Jakub Krehel).
 - **`/emil-design-eng`**: the animation decision framework, springs, gestures, review table (Emil Kowalski).
 
