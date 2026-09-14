@@ -18,7 +18,7 @@ You don't remember every skill, so ask. A **flow** is a path through the skills.
 4. **Branch: is the UX itself undecided?** → **`/shape-ui`** first, a brief per screen, before prototyping.
 5. **`/to-spec`** turns the thread into a spec: problem, journeys, requirements, decisions. Published to the tracker.
 6. **`/to-tickets`** splits it into session-sized vertical slices with blocking edges.
-7. **`/implement <ticket>`** per ticket, fresh context each. It drives `tdd` at the agreed seams, loads the UI catalogs for any screen, closes with `code-review`, commits. **`/implement-spec`** (experimental) works the whole ticket graph instead: concurrent implementer subagents in worktrees, merged as the frontier moves, one PR.
+7. **`/implement <ticket>`** per ticket, fresh context each. It drives `tdd` at the agreed seams, loads the UI catalogs for any screen, closes with `code-review`, commits.
 8. **`/review-ui`** on the branch or PR before merge.
 
 Keep steps 1 to 6 in one context window. Compact at a phase boundary, never mid-phase.

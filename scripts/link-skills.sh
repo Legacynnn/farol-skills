@@ -10,7 +10,7 @@ while IFS= read -r -d '' skill_md; do
   src="$(dirname "$skill_md")"
   names+=("$(basename "$src")")
   srcs+=("$src")
-done < <(find "$REPO/skills" -mindepth 2 -maxdepth 2 -name SKILL.md -print0)
+done < <(find "$REPO/skills" "$REPO/experimental" -mindepth 2 -maxdepth 2 -name SKILL.md -print0)
 
 for DEST in "${DESTS[@]}"; do
   if [ -L "$DEST" ]; then

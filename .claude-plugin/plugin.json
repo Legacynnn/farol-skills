@@ -1,11 +1,11 @@
 {
   "name": "farol-skills",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Farol's development skills: doc-aware grilling, codebase and GitHub exploration, prototypes, specs to session-sized tickets, and DESIGN.md-driven UI shaping, refining and finishing.",
   "author": {
     "name": "Dan Melo"
   },
-  "repository": "https://github.com/legacyn/farol-skills",
+  "repository": "https://github.com/Legacynnn/farol-skills",
   "license": "MIT",
   "keywords": [
     "engineering",
@@ -30,7 +30,6 @@
     "./skills/to-spec",
     "./skills/to-tickets",
     "./skills/implement",
-    "./skills/implement-spec",
     "./skills/tdd",
     "./skills/code-review",
     "./skills/shape-ui",

@@ -10,6 +10,8 @@ Agent skills merged from four sources (Matt Pocock's engineering flow, Jakub Kre
 - `.claude-plugin/plugin.json` lists every shipped skill; `.claude-plugin/marketplace.json` makes the repo its own marketplace. Bump `version` in `plugin.json` in the same commit as any change under `skills/`. Run `claude plugin validate . --strict` after touching either.
 - `scripts/link-skills.sh` symlinks every skill into `~/.claude/skills` and `~/.agents/skills` for local use.
 
+- `experimental/<name>/` is where a new skill incubates: same shape as `skills/`, linked locally by `scripts/link-skills.sh`, absent from `plugin.json` and from `ask-farol`. Promote by moving the folder to `skills/`, adding it to `plugin.json`, `README.md` and `ask-farol`, and bumping the version. A skill starts in `experimental/` unless it replaces an existing one.
+
 ## Invariants
 
 - Every skill is either **user-invoked** (`disable-model-invocation: true` plus `policy.allow_implicit_invocation: false` in `agents/openai.yaml`, human-facing description) or **model-invoked** (neither, description carries triggers). A user-invoked skill may call model-invoked ones through the Skill tool and never another user-invoked one.

@@ -9,7 +9,7 @@ The farol flow. Skills are steps; the docs in this folder are what every step re
 3. **Prototype when talk is not enough**: `/prototype`. Logic question: one HTML file. UI question: variants behind a picker, styled from `DESIGN.md`. Verdict flows back into the spec.
 4. **Spec**: `/to-spec`. Problem, journeys, requirements, decisions. Published to the tracker.
 5. **Tickets**: `/to-tickets`. Small vertical slices, one session each, blocking edges declared.
-6. **Build**: `/implement <ticket>` per ticket, fresh context per ticket. Or `/implement-spec` (experimental) to work the whole ticket graph with concurrent subagents.
+6. **Build**: `/implement <ticket>` per ticket, fresh context per ticket.
 7. **Review**: `code-review` and `finish-screen` run inside implement; `/review-ui` before merge.
 
 ## UI side-flow
