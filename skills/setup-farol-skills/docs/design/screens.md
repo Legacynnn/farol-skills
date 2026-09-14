@@ -1,7 +1,7 @@
 ---
 status: living
 updated: <YYYY-MM-DD>
-owner: shape-ui, finish-screen, sync-docs
+owner: shape-ui, prototype, finish-screen
 ---
 
 # Screens
@@ -25,14 +25,6 @@ Every screen and shared surface, what it is for, and where it stands. The invent
 ## Shared surfaces
 
 Components with product-level meaning (the command palette, the notification tray, the onboarding checklist), one row each in the same shape.
-
-## Update triggers
-
-- `shape-ui` writes a brief → row with status `planned`, brief path
-- `prototype` picks a winner → `prototyped`, spec link to the verdict
-- `implement` produces a screen → `built`, states as shipped
-- `finish-screen` completes → `finished`, all four letters
-- A route is renamed or removed → row updated or deleted, same commit
 
 ## Sources
 

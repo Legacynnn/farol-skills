@@ -46,8 +46,13 @@ Model-invoked references the skills above pull in. Reach for them directly when 
 
 ## Docs
 
-The project docs under `docs/` (product vision, PRD, roadmap; brand, screens; architecture) each declare when they change. **`sync-docs`** is model-invoked and runs at the end of the flow steps above; call it after any decision. **`/add-doc`** adds a doc in the same shape and registers it.
+The project docs under `docs/` (product vision, PRD, roadmap; brand, screens; architecture) are written by the flow skills as they go: the actor writes, there is no sync step. `docs/README.md` is the registry; copy `docs/_template.md` and add a row to extend it.
+
+## Making skills
+
+- **`/write-skill`**: write or review a skill, for this project or for farol-skills, applying `writing-for-agents`.
+- **`/writing-for-agents`**: the reference for any document an agent consumes.
 
 ## Precondition
 
-**`/setup-farol-skills`** once per repo: tracker (Linear, GitHub, or local `.scratch/`), `docs/agents/` navigation docs, `DESIGN.md`, the `docs/` layout.
+**`/setup-farol-skills`** once per repo: tracker (Linear, GitHub, or local `.scratch/`), `docs/agents/` navigation docs, `DESIGN.md`, the `docs/` layout. Then **`/setup-verify`** once per repo: it detects the stack and writes the project's **`verify`** skill, the loop every flow skill closes on (browser via Chrome MCP, simulator, emulator, Tauri MCP, Electron CDP, curl, golden files). Re-run when the stack changes.

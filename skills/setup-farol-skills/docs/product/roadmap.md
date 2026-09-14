@@ -1,7 +1,7 @@
 ---
 status: living
 updated: <YYYY-MM-DD>
-owner: to-spec, sync-docs
+owner: to-spec, to-tickets, implement
 ---
 
 # Roadmap
@@ -37,14 +37,6 @@ Most recent first. One line each, with the date and the spec.
 What we decided not to do and why, so it is not reproposed.
 
 - **<Idea>**: <reason>, decided <date>
-
-## Update triggers
-
-- `to-spec` publishes → item enters Next (or Now when work starts at once)
-- `to-tickets` publishes → item moves to Now with its ticket count
-- A ticket completes → update the Now count
-- Last ticket done → move to Shipped with the date
-- `grill-me` produces a problem without a spec → Later
 
 ## Sources
 

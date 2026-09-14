@@ -40,10 +40,6 @@ Photography, illustration and iconography direction: subjects, treatment, what i
 
 The one sentence a user should be able to say after a week with the product.
 
-## Update triggers
-
-- A naming, voice, mark or imagery decision is made → replace the affected line, date it, cite the decision
-
 ## Sources
 
 _none yet_

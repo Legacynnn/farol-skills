@@ -8,7 +8,7 @@ description: Mobile-first refactor of a screen through the DESIGN.md breakpoints
 Rebuild the layout of a screen from the narrowest width up. The 320px rendering is the base case; larger breakpoints only add.
 
 1. Resolve the target and read `DESIGN.md` (Foundations: breakpoints, spacing; Patterns: shells, density).
-2. Audit at 320px, then at each `DESIGN.md` breakpoint, in a browser when available: horizontal overflow, clipped or overlapping content, tap targets under 44px, fixed widths, hover-only affordances, content reachable only by hover or wide viewport, `100vh` on mobile browsers, missing safe-area insets.
+2. Audit at 320px, then at each `DESIGN.md` breakpoint, through the project's `verify` runtime loop when one exists: horizontal overflow, clipped or overlapping content, tap targets under 44px, fixed widths, hover-only affordances, content reachable only by hover or wide viewport, `100vh` on mobile browsers, missing safe-area insets.
 3. Refactor, keeping behaviour identical:
    - Base styles are the mobile layout; breakpoints are `min-width` only. Remove `max-width` media queries.
    - Single column by default; grids and side-by-side arrive at the breakpoint that fits them.

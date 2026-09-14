@@ -14,7 +14,7 @@ Answer one question about **this** repo, with evidence. The answer is a set of `
 3. **Fan out.** Dispatch sub-agents for independent searches (an entry point, a data flow, a naming convention). Each reports locations and excerpts, never whole files. Keep the synthesis here.
 4. **Trace, don't guess.** For "how does X work", follow the execution path from entry to effect and cite every hop. For "where is X", cite the definition and its main call sites. For "what would a change to X touch", list the importers one hop out and say how many you did not expand.
 5. **Answer.** Lead with the conclusion. Then the trace as a list, one hop per bullet with its citation. Then what surprised you or contradicts the docs.
-6. **Capture.** If the answer took more than a trivial search, write it to `.scratch/explorations/<topic>.md` (question, answer, citations, date) so the next session starts from it. If `navigation.md` was wrong or missing something a future agent needs, propose the exact edit and apply it when the user agrees.
+6. **Capture.** If the answer took more than a trivial search, write it to `.scratch/explorations/<topic>.md` (question, answer, citations, date) so the next session starts from it. If `docs/agents/navigation.md` or `docs/architecture/overview.md` was wrong or missing something a future agent needs, propose the exact edit and apply it when the user agrees.
 
 ## Rules
 

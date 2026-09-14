@@ -18,10 +18,10 @@ The output is the **agent docs**, the set of files an agent reads before it asks
 | `docs/agents/workflow.md` | this skill | the farol flow, phase boundaries, context hygiene |
 | `docs/agents/domain.md` | this skill | how to consume `CONTEXT.md` and ADRs |
 | `DESIGN.md` | this skill seeds, `shape-ui` and humans maintain | design system doc: audience, tone, tokens, components, motion, copy voice. **Required** for every UI skill |
-| `docs/README.md` | this skill, `add-doc` | registry of every project doc: purpose, writer, update triggers |
-| `docs/product/{vision,prd,roadmap}.md` | humans, `to-spec`, `sync-docs` | why, what capabilities, what order |
-| `docs/design/{brand,screens}.md` | humans, `shape-ui`, `finish-screen`, `sync-docs` | identity beyond UI; screen inventory with states and status |
-| `docs/architecture/overview.md` | `grill-me`, `to-spec`, `sync-docs` | contexts, containers, data, request paths, boundaries, debt |
+| `docs/README.md` | this skill, humans | registry of every project doc: what, who writes it, when |
+| `docs/product/{vision,prd,roadmap}.md` | humans, `to-spec`, `to-tickets`, `implement` | why, what capabilities, what order |
+| `docs/design/{brand,screens}.md` | humans, `shape-ui`, `prototype`, `finish-screen` | identity beyond UI; screen inventory with states and status |
+| `docs/architecture/overview.md` | `to-spec`, `domain-modeling`, `codebase-explore` | contexts, containers, data, request paths, boundaries, debt |
 | `CONTEXT.md` | `domain-modeling`, lazily | domain glossary |
 | `docs/adr/` | `domain-modeling`, lazily | decisions |
 
@@ -59,7 +59,7 @@ Always write `.impeccable.md` as a mirror so impeccable's own commands read the 
 
 **Section D: Domain docs.** Default single-context (`CONTEXT.md` at root, `docs/adr/`). Offer multi-context only on monorepo signals.
 
-**Section E: Project docs.** Scaffold the full layout from [docs/](./docs/) by default: `README.md` (registry), `product/vision.md`, `product/prd.md`, `product/roadmap.md`, `design/brand.md`, `design/screens.md`, `architecture/overview.md`. Pre-fill from exploration: containers and request paths from the code, screens from the routes, the one-line from the README, users and tone from Section B answers (the same three questions feed `DESIGN.md` Product and `vision.md` Users, so ask once). Every section you cannot fill keeps `_none yet_`. Existing docs with the same names are kept and only the registry row is added. Ask one question: skip any of these? A repo that is a library or a CLI usually drops `design/`.
+**Section E: Project docs.** Scaffold the full layout from [docs/](./docs/) by default: `README.md` (registry), `_template.md`, `product/vision.md`, `product/prd.md`, `product/roadmap.md`, `design/brand.md`, `design/screens.md`, `architecture/overview.md`. Pre-fill from exploration: containers and request paths from the code, screens from the routes, the one-line from the README, users and tone from Section B answers (the same three questions feed `DESIGN.md` Product and `vision.md` Users, so ask once). Every section you cannot fill keeps `_none yet_`. Existing docs with the same names are kept and only the registry row is added. Ask one question: skip any of these? A repo that is a library or a CLI usually drops `design/`.
 
 ### 3. Confirm and write
 
@@ -79,7 +79,7 @@ Read `docs/agents/README.md` before exploring or asking questions. It indexes th
 - Workflow: `docs/agents/workflow.md`.
 - Design system: `DESIGN.md`. Required reading before any UI work.
 - Domain: [single-context | multi-context]. See `docs/agents/domain.md`.
-- Project docs: `docs/README.md` is the registry. `sync-docs` keeps them current; `add-doc` extends them.
+- Project docs: `docs/README.md` is the registry; each doc names the skill that writes it. To add one, copy `docs/_template.md` and add a row.
 ```
 
 Write from the templates in this folder:
@@ -94,4 +94,4 @@ Write from the templates in this folder:
 
 ### 4. Done
 
-Say which skills now read these files. Every doc under `docs/` and `DESIGN.md` is living: `codebase-explore` proposes navigation edits when it finds the map stale, `shape-ui` and `finish-screen` update `DESIGN.md` when a decision lands. Re-run this skill only to switch tracker or restart.
+Tell the user to run `/setup-verify` next, so the flow skills can verify their work in this project. Say which skills now read these files. Every doc under `docs/` and `DESIGN.md` is living: `codebase-explore` proposes navigation edits when it finds the map stale, `shape-ui` and `finish-screen` update `DESIGN.md` when a decision lands. Re-run this skill only to switch tracker or restart.

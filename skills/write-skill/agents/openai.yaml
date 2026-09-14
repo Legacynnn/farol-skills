@@ -1,0 +1,5 @@
+interface:
+  display_name: "Write Skill"
+  short_description: "Write or review a skill"
+policy:
+  allow_implicit_invocation: false

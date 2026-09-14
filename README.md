@@ -23,9 +23,10 @@ Then, once per repo:
 
 ```
 /setup-farol-skills
+/setup-verify
 ```
 
-It configures the issue tracker (Linear, GitHub, or local `.scratch/`), writes the agent navigation docs under `docs/agents/`, seeds `DESIGN.md`, and scaffolds the project docs layout below.
+The second detects the stack and writes the project's own `verify` skill (`.claude/skills/verify/`): real commands plus a runtime probe per surface (Chrome MCP, iOS simulator, Android emulator, Tauri MCP, Electron CDP, curl, golden files). Every flow skill closes its loop on that evidence. The first configures the issue tracker (Linear, GitHub, or local `.scratch/`), writes the agent navigation docs under `docs/agents/`, seeds `DESIGN.md`, and scaffolds the project docs layout below.
 
 ## The flow
 
@@ -66,14 +67,16 @@ It configures the issue tracker (Linear, GitHub, or local `.scratch/`), writes t
 | `docs/design/screens.md` | every screen: route, purpose, primary action, states `L E R N`, status, spec |
 | `docs/architecture/overview.md` | context, contexts, containers, data, request paths, cross-cutting, boundaries, debt |
 
-Every doc carries frontmatter (`status`, `updated`, `owner`), fixed sections that stay even when empty, an **Update triggers** block, and **Sources**. `sync-docs` fires events (spec published, ticket done, screen finished, ADR written) against the triggers; `/add-doc` adds a doc in the same shape and registers it.
+Every doc carries frontmatter (`status`, `updated`, `owner`), fixed sections that stay even when empty, and **Sources**. The skill that produces a change writes the doc (`to-spec` fills PRD, roadmap and architecture rows; `implement` moves status; `finish-screen` marks the screen). To add a doc: copy `docs/_template.md`, add a registry row.
 
 ## Reference
 
 **User-invoked** (you type them; the agent never fires them on its own)
 
 - [ask-farol](./skills/ask-farol/SKILL.md): router over the set.
-- [setup-farol-skills](./skills/setup-farol-skills/SKILL.md): once per repo; tracker, agent docs, `DESIGN.md`.
+- [setup-farol-skills](./skills/setup-farol-skills/SKILL.md): once per repo; tracker, agent docs, `DESIGN.md`, docs layout.
+- [setup-verify](./skills/setup-verify/SKILL.md): once per repo; detects the stack, proves the commands and runtime probes, writes `.claude/skills/verify/`.
+- [write-skill](./skills/write-skill/SKILL.md): write or review a skill for this project or for farol-skills.
 - [grill-me](./skills/grill-me/SKILL.md): relentless interview that reads the docs first and records terms and decisions.
 - [to-spec](./skills/to-spec/SKILL.md): conversation to spec (problem, journeys, requirements, decisions), published to the tracker.
 - [to-tickets](./skills/to-tickets/SKILL.md): spec to session-sized vertical slices with blocking edges.
@@ -82,7 +85,6 @@ Every doc carries frontmatter (`status`, `updated`, `owner`), fixed sections tha
 - [shape-ui](./skills/shape-ui/SKILL.md): plan a screen before code; brief plus `DESIGN.md` updates.
 - [refine-ui](./skills/refine-ui/SKILL.md): polish pass against the craft catalogs.
 - [review-ui](./skills/review-ui/SKILL.md): change-scoped UI review with a Block/Approve verdict.
-- [add-doc](./skills/add-doc/SKILL.md): add a project doc in the standard shape and register it.
 
 **Model-invoked** (you or the agent)
 
@@ -96,7 +98,7 @@ Every doc carries frontmatter (`status`, `updated`, `owner`), fixed sections tha
 - [fix-copy](./skills/fix-copy/SKILL.md): every string in the product voice.
 - [mobile-first](./skills/mobile-first/SKILL.md): rebuild a layout from 320px up.
 - [finish-screen](./skills/finish-screen/SKILL.md): prototype winner or rough screen to production standard; `implement` calls it on every screen.
-- [sync-docs](./skills/sync-docs/SKILL.md): walk every doc's update triggers for an event and edit only what they name.
+- [writing-for-agents](./skills/writing-for-agents/SKILL.md): the reference for skills, `AGENTS.md`, and any doc an agent reads by pointer. Vendored from Matt Pocock.
 - [anti-slop](./skills/anti-slop/SKILL.md): the AI-slop bans and the font, colour, structure procedures that replace reflex defaults. Distilled from impeccable.style, references vendored.
 - [better-ui](./skills/better-ui/SKILL.md): exact values for radii, shadows, icons, enter/exit, performance. Vendored from Jakub Krehel.
 - [emil-design-eng](./skills/emil-design-eng/SKILL.md): animation decision framework, springs, gestures, review table. Vendored from Emil Kowalski.

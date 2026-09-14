@@ -1,7 +1,7 @@
 ---
 status: living
 updated: <YYYY-MM-DD>
-owner: to-spec, sync-docs
+owner: to-spec, to-tickets, implement
 ---
 
 # Product requirements
@@ -31,13 +31,6 @@ Rules that apply to every capability: performance budgets, accessibility floor (
 Problems from `vision.md` with no capability yet.
 
 - <problem> → <what is blocking a spec>
-
-## Update triggers
-
-- `to-spec` publishes a spec → add or update its capability rows, status `specced`
-- `to-tickets` publishes tickets → status `building`
-- The last ticket of a spec is done → status `shipped`, date
-- A spec is abandoned → status `dropped`, reason in Sources
 
 ## Sources
 

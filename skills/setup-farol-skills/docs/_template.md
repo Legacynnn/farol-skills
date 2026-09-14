@@ -1,7 +1,7 @@
 ---
 status: draft
 updated: <YYYY-MM-DD>
-owner: <role or skill>
+owner: <role, or the skill that writes this as part of its job>
 ---
 
 # <Title>
@@ -11,10 +11,6 @@ owner: <role or skill>
 ## <Section>
 
 _none yet_
-
-## Update triggers
-
-- <event that changes this doc> → <what to change>
 
 ## Sources
 

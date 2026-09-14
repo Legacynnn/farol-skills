@@ -65,4 +65,4 @@ Per the tracker doc, in dependency order so blockers have identifiers first. Loc
 
 No file paths or code in tickets except a prototype snippet that encodes a decision, trimmed and marked.
 
-Then call the Skill tool with "sync-docs" for the event "tickets published".
+Then move the feature to Now in `docs/product/roadmap.md` with `0/<m>` tickets and set its rows to `building` in `docs/product/prd.md`.

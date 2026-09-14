@@ -12,5 +12,5 @@ The bridge from "it works" or "we picked this variant" to "this ships". Prototyp
 3. Ship every state `DESIGN.md` requires: loading (skeleton or spinner matching the system), empty (what belongs here plus primary action), error (what happened and how to recover), narrow width (320px holds). Long content, missing images, i18n-length strings, and slow networks each have a defined rendering.
 4. Run the passes in order, one Skill tool call each: "anti-slop" (bans, font, colour, structure), "mobile-first" (320px up), "better-ui" and "emil-design-eng" (polish and motion), "fix-copy" (every string).
 5. Clear the floor `DESIGN.md` names under Patterns, every item.
-6. Verify in a browser when available: each state, each breakpoint, keyboard-only pass, motion at 10% speed. Report what was verified and what was not.
-7. Log the decisions the finish settled in `DESIGN.md`, then call the Skill tool with "sync-docs" for the event "screen finished". Hand back to the ticket: criteria ticked, ready for `/review-ui`.
+6. Call the Skill tool with "verify" and run the surface's runtime loop on each state, each breakpoint, a keyboard-only pass, motion at 10% speed. Report the evidence and everything `Not verified`.
+7. Log the decisions the finish settled in `DESIGN.md`, and set the screen's row in `docs/design/screens.md` to `finished` with all four state letters. Hand back to the ticket: criteria ticked, ready for `/review-ui`.

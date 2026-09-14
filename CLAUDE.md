@@ -5,8 +5,8 @@ Agent skills merged from four sources (Matt Pocock's engineering flow, Jakub Kre
 ## Layout
 
 - `skills/<name>/SKILL.md` is the skill; supporting `.md` files sit beside it; `agents/openai.yaml` carries Codex metadata.
-- `skills/setup-farol-skills/` holds the templates for the per-repo docs: `docs/agents/*.md`, `DESIGN.md`, and the project docs layout under `docs/` (registry, product, design, architecture). Every project doc template carries frontmatter, fixed sections, **Update triggers** and **Sources**; `sync-docs` depends on that shape.
-- `skills/better-ui/`, `skills/emil-design-eng/`, `skills/tdd/`, `skills/code-review/` and `skills/anti-slop/reference/` are vendored from upstream (see `NOTICE.md`); `tdd` and `code-review` carry only the setup pointer and doc-path edits. Re-sync from upstream rather than editing here.
+- `skills/setup-farol-skills/` holds the templates for the per-repo docs: `docs/agents/*.md`, `DESIGN.md`, and the project docs layout under `docs/` (registry, product, design, architecture). Every project doc template carries frontmatter (`owner` names the writing skill), fixed sections and **Sources**. The skill that produces a change writes the doc; there is no sync skill.
+- `skills/better-ui/`, `skills/emil-design-eng/`, `skills/tdd/`, `skills/code-review/`, `skills/writing-for-agents/` and `skills/anti-slop/reference/` are vendored from upstream (see `NOTICE.md`); `tdd` and `code-review` carry only the setup pointer and doc-path edits. Re-sync from upstream rather than editing here.
 - `.claude-plugin/plugin.json` lists every shipped skill; `.claude-plugin/marketplace.json` makes the repo its own marketplace. Bump `version` in `plugin.json` in the same commit as any change under `skills/`. Run `claude plugin validate . --strict` after touching either.
 - `scripts/link-skills.sh` symlinks every skill into `~/.claude/skills` and `~/.agents/skills` for local use.
 
@@ -17,4 +17,5 @@ Agent skills merged from four sources (Matt Pocock's engineering flow, Jakub Kre
 - Every skill that touches UI reads `DESIGN.md` first and loads `anti-slop`, `better-ui` and `emil-design-eng` for values. Rules live in those catalogs; farol skills own process, not values.
 - Every skill that asks the user anything reads `docs/agents/README.md` and what it indexes first, and never asks what those files answer.
 - `ask-farol` is the router. When a skill is added, renamed, removed, or changes where it sits in the flow, update `ask-farol`, `README.md`, `plugin.json`, and `setup-farol-skills/workflow.md`.
+- `setup-verify` writes a **project** skill at `.claude/skills/verify/`; farol skills reach it as `Call the Skill tool with "verify"` and fall back to `docs/agents/navigation.md` commands when it is absent.
 - No em-dashes in prose. No comments in scripts.

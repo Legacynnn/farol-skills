@@ -22,6 +22,6 @@ A change review, not a screen review: what did this diff make worse? Read-only.
 
 `HIGH` blocks a task, hides content, or breaks the accessibility floor. `MEDIUM` harms comprehension or consistency. `LOW` is isolated polish. One root cause is one row with every location.
 
-**Verification**: commands run, states walked, and everything `Not verified`.
+**Verification**: the `verify` loops run (call the Skill tool with "verify" when the project has one), states walked, and everything `Not verified`.
 
 **Verdict**: `Block` when any `HIGH` remains, else `Approve`. Never approve coverage not inspected.

@@ -1,7 +1,7 @@
 ---
 status: living
 updated: <YYYY-MM-DD>
-owner: grill-me, to-spec, sync-docs
+owner: to-spec, domain-modeling, codebase-explore
 ---
 
 # Architecture
@@ -57,13 +57,6 @@ The invariants a change must not break, each pointing at its ADR.
 What is wrong, why it is still there, what would fix it.
 
 - <debt>: <why>, fix: <what>, tracked at <issue>
-
-## Update triggers
-
-- A spec adds or changes a module, container, integration or entity → update the row, cite the spec
-- An ADR lands → add or amend the rule under Boundaries
-- `codebase-explore` finds the map wrong → propose the fix
-- Debt is paid → delete its line
 
 ## Sources
 

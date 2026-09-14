@@ -10,7 +10,7 @@ A polish pass over a screen that already works. It fixes what makes the interfac
 
 1. Resolve the target: the path or route the user named, else the uncommitted UI changes. State it.
 2. Read `DESIGN.md`. Every fix uses its tokens; a value not in the system is either added to `DESIGN.md` first or not used.
-3. Call the Skill tool three times, for "anti-slop", "better-ui" and "emil-design-eng". Walk the target against all three catalogs, slowly: every state the component defines (hover, focus, active, loading, empty, error), motion replayed at 10% speed when a browser is available.
+3. Call the Skill tool three times, for "anti-slop", "better-ui" and "emil-design-eng". Walk the target against all three catalogs, slowly: every state the component defines (hover, focus, active, loading, empty, error), motion replayed at 10% speed through the project's `verify` runtime loop when one exists.
 4. Fix in place, cheapest fix first: delete, use the platform, reuse a token, correct the value, add. Keep the diff to polish; a behaviour change is a finding to report, not a change to make.
 5. Report one table, grouped by principle, ordered by severity:
 

@@ -44,7 +44,7 @@ Every variant ships with the states `DESIGN.md` requires: loading, empty, error,
 
 ### 5. Verify and hand over
 
-Flip through every variant yourself: renders, interactions respond, console clean, 320px width holds. Screenshot each when browser tooling is available. Then present and **stop**:
+Flip through every variant yourself through the project's `verify` runtime loop: renders, interactions respond, console clean, 320px holds, one screenshot per variant. Then present and **stop**:
 
 | # | Variant | Axis position | When it wins | Its cost |
 | --- | --- | --- | --- | --- |
@@ -53,7 +53,7 @@ Give the URL and the keys. The best feedback is "header from Quiet with the list
 
 ### 6. Capture and clean up
 
-Record the verdict (which, why, what was stolen from where) in the spec, and any settled rule as one line in `DESIGN.md`'s Decisions log. Promote the winner through `/finish-screen`, which rewrites it to production standard. Move the losing variants and the switcher to the `prototype/<name>` branch. Main keeps only the winner.
+Record the verdict (which, why, what was stolen from where) in the spec, the screen's row in `docs/design/screens.md` as `prototyped`, and any settled rule as one line in `DESIGN.md`'s Decisions log. Promote the winner through `/finish-screen`, which rewrites it to production standard. Move the losing variants and the switcher to the `prototype/<name>` branch. Main keeps only the winner.
 
 ## Anti-patterns
 

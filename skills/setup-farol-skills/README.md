@@ -8,6 +8,7 @@ Read in this order before exploring the codebase or asking the user a question. 
 4. [domain.md](./domain.md): how to use `CONTEXT.md` and ADRs.
 5. `../../DESIGN.md`: the design system. Mandatory before any UI work.
 6. `../../CONTEXT.md`: the domain glossary, if present.
-7. [../README.md](../README.md): the registry of product, design and architecture docs. Open the ones the task names; `architecture/overview.md` before any structural change, `product/vision.md` before any spec.
+7. `../../.claude/skills/verify/SKILL.md`: how to prove a change works here; every loop closes on it. Missing means `/setup-verify` has not run.
+8. [../README.md](../README.md): the registry of product, design and architecture docs. Open the ones the task names; `architecture/overview.md` before any structural change, `product/vision.md` before any spec.
 
 If a file is missing, proceed silently. Skills create `CONTEXT.md` and `docs/adr/` lazily.

@@ -1,5 +1,0 @@
-interface:
-  display_name: "Add Doc"
-  short_description: "Add and register a project doc"
-policy:
-  allow_implicit_invocation: false

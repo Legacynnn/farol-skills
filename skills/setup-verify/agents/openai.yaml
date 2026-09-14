@@ -1,0 +1,5 @@
+interface:
+  display_name: "Setup Verify"
+  short_description: "Generate this project's verify skill"
+policy:
+  allow_implicit_invocation: false

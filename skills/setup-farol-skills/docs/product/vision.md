@@ -49,11 +49,6 @@ How we know it is working, three numbers at most, with today's value.
 | Measure | Today | Target | Read from |
 | --- | --- | --- | --- |
 
-## Update triggers
-
-- Audience, positioning or principles shift in a `grill-me` session → rewrite the affected section, date it
-- A bet is falsified or confirmed → move it to Sources with the evidence
-
 ## Sources
 
 _none yet_

@@ -15,7 +15,7 @@ Take the conversation, the explorations in `.scratch/explorations/`, any prototy
 1. Read `docs/agents/README.md` and what it indexes if not already in context, plus `docs/product/vision.md` and `docs/architecture/overview.md`; the Problem traces to the first, the implementation decisions respect the second. Use `CONTEXT.md` vocabulary throughout. Respect ADRs; contradict one only explicitly.
 2. Sketch the seams you will test the feature at. Prefer existing seams, at the highest point possible; ideal count is one. Confirm the seams with the user in one message.
 3. Write the spec from the template. Publish per the tracker doc. Link explorations and the prototype branch by path or URL rather than pasting them in.
-4. Call the Skill tool with "sync-docs" for the event "spec published".
+4. Record it: a capability row per journey in `docs/product/prd.md` (status `specced`, spec pointer), an item under Next in `docs/product/roadmap.md`, and any new module, integration or entity in `docs/architecture/overview.md`, each with the spec as source.
 
 <spec-template>
 
