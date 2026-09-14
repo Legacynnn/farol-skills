@@ -1,0 +1,3 @@
+interface:
+  display_name: "GitHub Explore"
+  short_description: "Clone and explain an open-source repo"

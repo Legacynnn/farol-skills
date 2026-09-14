@@ -1,0 +1,5 @@
+interface:
+  display_name: "Review UI"
+  short_description: "Review UI in a change against DESIGN.md"
+policy:
+  allow_implicit_invocation: false

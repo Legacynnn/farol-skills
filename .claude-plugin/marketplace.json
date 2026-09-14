@@ -1,0 +1,16 @@
+{
+  "name": "farol",
+  "owner": {
+    "name": "Dan Melo"
+  },
+  "description": "farol-skills as an installable Claude Code plugin.",
+  "plugins": [
+    {
+      "name": "farol-skills",
+      "source": "./",
+      "description": "Doc-aware grilling, exploration, prototypes, spec and ticket flow, DESIGN.md-driven UI skills.",
+      "category": "engineering",
+      "keywords": ["engineering", "skills", "grilling", "ui", "prototype"]
+    }
+  ]
+}

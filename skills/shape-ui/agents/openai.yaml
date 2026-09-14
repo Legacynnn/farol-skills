@@ -1,0 +1,5 @@
+interface:
+  display_name: "Shape UI"
+  short_description: "Plan a screen before code, against DESIGN.md"
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Finish Screen"
+  short_description: "Take a screen to production standard"
+policy:
+  allow_implicit_invocation: false

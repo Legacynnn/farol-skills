@@ -1,0 +1,5 @@
+interface:
+  display_name: "Ask Farol"
+  short_description: "Which farol skill fits your situation"
+policy:
+  allow_implicit_invocation: false

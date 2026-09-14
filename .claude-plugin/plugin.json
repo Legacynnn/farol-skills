@@ -1,0 +1,41 @@
+{
+  "name": "farol-skills",
+  "version": "0.1.0",
+  "description": "Farol's development skills: doc-aware grilling, codebase and GitHub exploration, prototypes, specs to session-sized tickets, and DESIGN.md-driven UI shaping, refining and finishing.",
+  "author": {
+    "name": "Dan Melo"
+  },
+  "repository": "https://github.com/legacyn/farol-skills",
+  "license": "MIT",
+  "keywords": [
+    "engineering",
+    "skills",
+    "grilling",
+    "spec",
+    "tickets",
+    "prototype",
+    "design-engineering",
+    "ui"
+  ],
+  "skills": [
+    "./skills/ask-farol",
+    "./skills/setup-farol-skills",
+    "./skills/grilling",
+    "./skills/grill-me",
+    "./skills/domain-modeling",
+    "./skills/codebase-explore",
+    "./skills/github-explore",
+    "./skills/prototype",
+    "./skills/to-spec",
+    "./skills/to-tickets",
+    "./skills/implement",
+    "./skills/shape-ui",
+    "./skills/refine-ui",
+    "./skills/fix-copy",
+    "./skills/mobile-first",
+    "./skills/finish-screen",
+    "./skills/review-ui",
+    "./skills/better-ui",
+    "./skills/emil-design-eng"
+  ]
+}

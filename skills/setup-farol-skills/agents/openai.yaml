@@ -1,0 +1,5 @@
+interface:
+  display_name: "Setup farol-skills"
+  short_description: "Configure a repo for farol-skills"
+policy:
+  allow_implicit_invocation: false

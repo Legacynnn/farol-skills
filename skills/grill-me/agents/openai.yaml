@@ -1,0 +1,5 @@
+interface:
+  display_name: "Grill Me"
+  short_description: "Interview to sharpen a plan, doc-aware"
+policy:
+  allow_implicit_invocation: false

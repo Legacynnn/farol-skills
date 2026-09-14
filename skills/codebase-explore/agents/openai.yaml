@@ -1,0 +1,3 @@
+interface:
+  display_name: "Codebase Explore"
+  short_description: "Answer questions about this repo with citations"
