@@ -17,6 +17,7 @@ The output is the **agent docs**, the set of files an agent reads before it asks
 | `docs/agents/navigation.md` | this skill, then anyone | codebase map: entry points, key dirs, commands, conventions |
 | `docs/agents/workflow.md` | this skill | the farol flow, phase boundaries, context hygiene |
 | `docs/agents/domain.md` | this skill | how to consume `CONTEXT.md` and ADRs |
+| `docs/agents/rules.md` | this skill seeds, `rule` and humans add | project conventions as one row each, or a pointer to the tool that enforces them |
 | `DESIGN.md` | this skill seeds, `shape-ui` and humans maintain | design system doc: audience, tone, tokens, components, motion, copy voice. **Required** for every UI skill |
 | `docs/README.md` | this skill, humans | registry of every project doc: what, who writes it, when |
 | `docs/product/{vision,prd,roadmap}.md` | humans, `to-spec`, `to-tickets`, `implement` | why, what capabilities, what order |
@@ -79,6 +80,7 @@ Read `docs/agents/README.md` before exploring or asking questions. It indexes th
 - Workflow: `docs/agents/workflow.md`.
 - Design system: `DESIGN.md`. Required reading before any UI work.
 - Domain: [single-context | multi-context]. See `docs/agents/domain.md`.
+- Rules: `docs/agents/rules.md`. Read before writing code; add with the `rule` skill.
 - Project docs: `docs/README.md` is the registry; each doc names the skill that writes it. To add one, copy `docs/_template.md` and add a row.
 ```
 
@@ -88,6 +90,7 @@ Write from the templates in this folder:
 - [issue-tracker-linear.md](./issue-tracker-linear.md), [issue-tracker-github.md](./issue-tracker-github.md), [issue-tracker-local.md](./issue-tracker-local.md)
 - [navigation.md](./navigation.md)
 - [workflow.md](./workflow.md)
+- [rules.md](./rules.md): seed the *Enforced by tools* section from the lint, type and test config found in exploration; keep the example row
 - [domain.md](./domain.md)
 - [design.md](./design.md) as `DESIGN.md` at the repo root
 - [docs/](./docs/): the project docs layout, folder for folder, each file dated and marked `draft` until a human edits it

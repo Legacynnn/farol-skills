@@ -48,6 +48,10 @@ Model-invoked references the skills above pull in. Reach for them directly when 
 
 The project docs under `docs/` (product vision, PRD, roadmap; brand, screens; architecture) are written by the flow skills as they go: the actor writes, there is no sync step. `docs/README.md` is the registry; copy `docs/_template.md` and add a row to extend it.
 
+## Rules
+
+**`rule`** is model-invoked: say "add a rule: ..." and it phrases the target, puts it in the linter when a tool can hold it or in `docs/agents/rules.md` when only review can, and reports today's violation count. `code-review` checks diffs against that table.
+
 ## Making skills
 
 - **`/write-skill`**: write or review a skill, for this project or for farol-skills, applying `writing-for-agents`.

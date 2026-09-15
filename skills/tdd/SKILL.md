@@ -9,7 +9,7 @@ TDD is the red → green loop. This skill is the reference that makes that loop 
 
 Verification runs through the project's `verify` skill when `.claude/skills/verify/` exists (call the Skill tool with "verify"); otherwise use the commands in `docs/agents/navigation.md` and tell the user to run `/setup-verify`.
 
-When exploring the codebase, read `CONTEXT.md` so test names and interface vocabulary match the domain language. Respect ADRs in the area you are touching.
+When exploring the codebase, read `docs/agents/rules.md` so the implementation obeys the project's conventions on the first pass, and `CONTEXT.md` so test names and interface vocabulary match the domain language. Respect ADRs in the area you are touching.
 
 ## What a good test is
 

@@ -42,7 +42,7 @@ Everything below runs in one context window until tickets exist; each ticket the
 
 **5. Tickets.** `/to-tickets` cuts the spec into vertical slices sized for one fresh session, each with its blocking edges, a **Read first** line, its seams and acceptance criteria. You approve the breakdown; it publishes in dependency order and moves the feature to Now on the roadmap.
 
-**6. Build, one ticket per session.** `/implement <ticket>` claims it, confirms the seams, drives `tdd` red-green at those seams, closes every slice through `verify`, runs `finish-screen` on any screen it produced, then `code-review` (Standards and Spec in parallel sub-agents), fixes every finding, updates the ticket and the roadmap count, commits. `experimental/implement-spec` does the whole graph instead with concurrent subagents in worktrees.
+**6. Build, one ticket per session.** `/implement <ticket>` claims it, reads `docs/agents/rules.md`, confirms the seams, drives `tdd` red-green at those seams, closes every slice through `verify`, runs `finish-screen` on any screen it produced, then `code-review` (Standards and Spec in parallel sub-agents), fixes every finding, updates the ticket and the roadmap count, commits. `experimental/implement-spec` does the whole graph instead with concurrent subagents in worktrees.
 
 **7. Finish and review UI.** `finish-screen` rebuilds a screen in the project's idiom, ships every state (`loading`, `empty`, `error`, 320px), runs `anti-slop`, `mobile-first`, `better-ui`, `emil-design-eng`, `fix-copy`, clears the floor `DESIGN.md` names, proves it through `verify`, and marks the screen finished. `/refine-ui` is the polish-only pass. `/review-ui` reviews the branch or PR against the same catalogs and returns `Block` or `Approve`.
 
@@ -74,6 +74,7 @@ Status: `stable` ships in the plugin; `experimental` lives in `experimental/` an
 | [fix-copy](./skills/fix-copy/SKILL.md) | stable | model | every string in the product voice |
 | [mobile-first](./skills/mobile-first/SKILL.md) | stable | model | layout from 320px up |
 | [review-ui](./skills/review-ui/SKILL.md) | stable | user | change-scoped UI review, Block or Approve |
+| [rule](./skills/rule/SKILL.md) | stable | model | add a project convention: linter when possible, `docs/agents/rules.md` otherwise |
 | [write-skill](./skills/write-skill/SKILL.md) | stable | user | write or review a skill |
 | [writing-for-agents](./skills/writing-for-agents/SKILL.md) | stable | model | reference for documents agents consume (vendored) |
 | [anti-slop](./skills/anti-slop/SKILL.md) | stable | model | AI-slop bans and the font, colour, structure procedures (impeccable) |
@@ -92,6 +93,7 @@ Plugin version: see [`.claude-plugin/plugin.json`](./.claude-plugin/plugin.json)
 | `docs/agents/workflow.md` | the flow above and context hygiene |
 | `docs/agents/issue-tracker.md` | where specs and tickets live, how to read and publish |
 | `docs/agents/domain.md` | how to consume `CONTEXT.md` and ADRs |
+| `docs/agents/rules.md` | project conventions, one row each, or a pointer to the tool that enforces them. Say "add a rule: ..." |
 | `DESIGN.md` | design system: audience, tone, direction, tokens, components, motion, copy, bans, floor, decisions log |
 | `.impeccable.md` | mirror of the Design Context so impeccable's own commands read the same truth |
 | `docs/README.md` | registry: every doc, what, who writes it, when. Copy `docs/_template.md` and add a row to add one |

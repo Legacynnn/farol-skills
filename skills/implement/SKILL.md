@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Implement
 
-One ticket per session. Fetch it per `docs/agents/issue-tracker.md` (claim it first where the tracker supports it), then read what its **Read first** line names.
+One ticket per session. Fetch it per `docs/agents/issue-tracker.md` (claim it first where the tracker supports it), then read what its **Read first** line names and `docs/agents/rules.md`.
 
 1. Restate the ticket's **Delivers** line and acceptance criteria. Confirm the seams under test exist or agree the new one in one message.
 2. Call the Skill tool with "tdd" and build at those seams, one red-green slice at a time. Close every slice through the Skill tool with "verify" (static loop per slice, the surface's runtime loop and all tests before step 4); without a project `verify`, use `docs/agents/navigation.md` commands and tell the user to run `/setup-verify`.

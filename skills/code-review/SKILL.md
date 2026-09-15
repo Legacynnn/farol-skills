@@ -33,7 +33,7 @@ Look for the originating spec, in this order:
 
 ### 3. Identify the standards sources
 
-Anything in the repo that documents how code should be written: `docs/agents/navigation.md` (its conventions section), `CODING_STANDARDS.md`, `CONTRIBUTING.md`, `CLAUDE.md`.
+Anything in the repo that documents how code should be written: `docs/agents/rules.md` first (one row per rule, with scope globs; rows marked `review` are yours, rows pointing at a tool are the tool's), then `docs/agents/navigation.md` (its conventions section), `CODING_STANDARDS.md`, `CONTRIBUTING.md`, `CLAUDE.md`.
 
 On top of whatever the repo documents, the Standards axis always carries the **smell baseline** below: a fixed set of Fowler code smells (_Refactoring_, ch.3) that applies even when a repo documents nothing. Two rules bind it:
 
@@ -75,7 +75,7 @@ If the spec is missing, skip the Spec sub-agent and note this in the final repor
 
 Present the two reports under `## Standards` and `## Spec` headings, verbatim or lightly cleaned. Do **not** merge or rerank findings, because the two axes are deliberately separate (see _Why two axes_).
 
-End with a one-line summary: total findings per axis, and the worst issue _within each axis_ (if any). Don't pick a single winner across axes: that's the reranking the separation exists to prevent.
+End with a one-line summary: total findings per axis, and the worst issue _within each axis_ (if any). A Standards finding that recurs three or more times in the diff and matches no row in `rules.md` is a candidate rule: name it, and call the Skill tool with "rule" when the user agrees. Don't pick a single winner across axes: that's the reranking the separation exists to prevent.
 
 UI in the diff is not reviewed here; that is `/review-ui`, which the user runs separately. Name it once in the summary when the diff touches screens.
 
